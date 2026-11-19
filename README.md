@@ -1,8 +1,11 @@
 # pi_tec_BD_supermercado
 Projeto Integrador de Ciência de Dados aplicado à análise de vendas de supermercado.
 
+**[Acesse o Dashboard Interativo no Streamlit](https://pitecbdsupermercado-rx7gpvlsw9gk3mw6fxvgmv.streamlit.app)**
 
-## Análises realizadas
+---
+
+##  1ª Entrega: Análise Exploratória e Visualizações
 
 A partir da base de dados escolhida, foram propostas inicialmente cinco visualizações orientadas à tomada de decisões:
 
@@ -33,13 +36,27 @@ A partir da base de dados escolhida, foram propostas inicialmente cinco visualiz
 
 > As análises foram desenvolvidas com Pandas e NumPy, e as cinco visualizações foram produzidas com Matplotlib.
 
+---
+
+## 2ª Entrega: Engenharia de Dados, Data Warehouse e Dashboard (BI)
+
+Na segunda etapa do projeto, a solução evoluiu para uma arquitetura analítica estruturada em banco de dados relacional e disponibilizada em uma aplicação web interativa:
+
+### 1. Arquitetura e Especificação dos Recursos do SGBD (`supermercado_dw`)
+- **SGBD e Armazenamento:** Implementação em **MySQL 8.0** utilizando o motor transacional `InnoDB` (conformidade ACID e integridade referencial) e codificação `utf8mb4`.
+- **Modelagem Dimensional (Star Schema):** Estruturação da tabela fato `fato_vendas` conectada a cinco dimensões (`ttempo`, `tfilial`, `tproduto`, `tcliente` e `tpagamento`), além da tabela operacional `etl_auditoria` para rastreabilidade das cargas.
+- **Integridade, Segurança e Performance:** Aplicação de restrições declarativas (`PRIMARY KEY`, `FOREIGN KEY`, `UNIQUE`, `CHECK`, `ENUM`), controle de acesso baseado em papéis (`role_dba`, `role_etl`, `role_bi_streamlit`), índices `B-Tree` para otimização de consultas analíticas e **Views OLAP** pré-agregadas.
+
+### 2. Script de Construção do Banco (`dump_supermarket_dw`)
+- Disponibilização do arquivo de *dump* SQL contendo toda a estrutura DDL (tabelas, restrições, índices, papéis/permissões e views analíticas) e a carga de dados (DML) para replicação completa do Data Warehouse.
+
+### 3. Aplicação Analítica Interativa (`app.py`)
+- Desenvolvimento de um painel gerencial interativo em **Python** com **Streamlit**, conectado às *Views* do Data Warehouse para suportar operações analíticas multidimensionais (*Slice*, *Dice*, *Drill-Down* e *Roll-Up*), monitoramento de KPIs executivos e análise de agrupamento de transações (*K-Means*).
+- **Acesso online:** [https://pitecbdsupermercado-rx7gpvlsw9gk3mw6fxvgmv.streamlit.app](https://pitecbdsupermercado-rx7gpvlsw9gk3mw6fxvgmv.streamlit.app)
+
+---
 
 ### Integrantes
-> HENRIQUE CASSONE FERNANDES<br>
-> GUILHERME COSTA SERRA<br>
 > DANIEL FELIPE SOUZA DA SILVA<br>
-> EMANOEL LUIZ SILVA DO NASCIMENTO<br>
 > JONATHAN MUSSATO SILVA<br>
 > LUCAS PEREIRA STEFANINI<br>
-> PAULA SELVATI FERREIRA COELHO<br>
-> DEBORA TAKESHITA<br>
