@@ -54,7 +54,7 @@ Na segunda etapa do projeto, a solução evoluiu para uma arquitetura analítica
 
 - Aplicação do algoritmo: Utilização do algoritmo de aprendizado não supervisionado K-Means para agrupar transações com características semelhantes, considerando variáveis como valor da compra, quantidade de itens e avaliação do cliente.
 
-Objetivo: Identificar padrões de comportamento nas compras e segmentar as transações em grupos (clusters), permitindo explorar diferenças entre os perfis de consumo e apoiar análises estratégicas do negócio.
+- Objetivo: Identificar padrões de comportamento nas compras e segmentar as transações em grupos (clusters), permitindo explorar diferenças entre os perfis de consumo e apoiar análises estratégicas do negócio.
 
 ### 4. Aplicação Analítica Interativa (`app.py`)
 - Desenvolvimento de um painel gerencial interativo em **Python** com **Streamlit**, conectado às *Views* do Data Warehouse para suportar operações analíticas multidimensionais (*Slice*, *Dice*, *Drill-Down* e *Roll-Up*), monitoramento de KPIs executivos e análise de agrupamento de transações (*K-Means*).
