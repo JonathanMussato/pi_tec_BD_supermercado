@@ -50,7 +50,13 @@ Na segunda etapa do projeto, a solução evoluiu para uma arquitetura analítica
 ### 2. Script de Construção do Banco (`dump_supermarket_dw`)
 - Disponibilização do arquivo de *dump* SQL contendo toda a estrutura DDL (tabelas, restrições, índices, papéis/permissões e views analíticas) e a carga de dados (DML) para replicação completa do Data Warehouse.
 
-### 3. Aplicação Analítica Interativa (`app.py`)
+### 3. Implantação de Algoritmo de Aprendizado de Márquinas para Análise de Agrupamento
+
+- Aplicação do algoritmo: Utilização do algoritmo de aprendizado não supervisionado K-Means para agrupar transações com características semelhantes, considerando variáveis como valor da compra, quantidade de itens e avaliação do cliente.
+
+Objetivo: Identificar padrões de comportamento nas compras e segmentar as transações em grupos (clusters), permitindo explorar diferenças entre os perfis de consumo e apoiar análises estratégicas do negócio.
+
+### 4. Aplicação Analítica Interativa (`app.py`)
 - Desenvolvimento de um painel gerencial interativo em **Python** com **Streamlit**, conectado às *Views* do Data Warehouse para suportar operações analíticas multidimensionais (*Slice*, *Dice*, *Drill-Down* e *Roll-Up*), monitoramento de KPIs executivos e análise de agrupamento de transações (*K-Means*).
 - **Acesso online:** [https://pitecbdsupermercado-rx7gpvlsw9gk3mw6fxvgmv.streamlit.app](https://pitecbdsupermercado-rx7gpvlsw9gk3mw6fxvgmv.streamlit.app)
 
